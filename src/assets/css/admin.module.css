@@ -1,0 +1,55 @@
+/** @format */
+
+.admin_wrapper {
+  height: 100vh;
+  background: rgba(192, 192, 192, 0.444);
+  padding: 50px 10px;
+}
+.admin_wrapper button {
+  width: 150px;
+  font-size: 13px;
+}
+.table {
+  width: 90vw;
+  background-color: rgb(255, 240, 240);
+}
+.table tr {
+height: 50px;
+}
+.table button {
+  width: 50px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* modal */
+.modal_wrapper {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(29, 29, 29, 0.956);
+  color: var(--white);
+  text-transform: uppercase;
+  z-index: 100;
+  transition: 500ms;
+}
+
+.modal_wrapper i {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 20px;
+}
+.modal_wrapper input{
+    width: 400px;
+    height: 50px;
+    border-radius: 0;
+  background-color: rgba(67, 67, 67, 0.524);
+  border: 0;
+  color: rgb(230, 230, 230);
+
+}
