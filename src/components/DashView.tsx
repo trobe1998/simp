@@ -39,7 +39,7 @@ const DashView = ({show, user}: showside) => {
     {
       stat_name: "Currrent Balance",
       // no: `${statsData?.current_bal}.00`,
-      no: `1500.00`,
+      no: `11690.00`,
       cod: "Amount in account",
     },
     {
