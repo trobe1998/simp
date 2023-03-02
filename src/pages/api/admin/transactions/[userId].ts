@@ -63,29 +63,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
    }
     
     }
-    else if (req.method === 'PUT') {
-        let { userId }:Partial<{ [key: string]: string | string[]; }> = req.query
-        let userIds:any = typeof userId === 'string' ? userId : null
-        const id = typeof userIds === 'string' ? userIds?.split('|')[0] : null
-        const rowNum =  typeof userIds === 'string' ? userIds?.split('|')[1] : null
-             const client = await clientPromise;
-       const db = client.db("lexo");
-          const transactions = await db
-           .collection("transaction")
-           .find({unique_id: id })
-           .sort({ metacritic: -1 })
-           .toArray();
-        let trn = transactions[0].userTransactions
-         trn.splice(Number(rowNum),1)
-        // const tranUpdated = transactions[0].userTransactions
-
-           const update = await db.collection("transaction")
-                .updateOne({ unique_id: id }, {
-                    $set:{userTransactions: trn} })
-        
-      res.send( trn)
-
-    }
+    
 };
 
 
