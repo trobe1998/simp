@@ -22,7 +22,7 @@ const HomeSidebar = ({show, setShow, set, view}) => {
           }`}
           onClick={() => {
             set(1);
-            // setShow(false);
+            setShow(false);
           }}
         >
           <i className="mdi mdi-view-dashboard"></i>
@@ -35,7 +35,7 @@ const HomeSidebar = ({show, setShow, set, view}) => {
           }`}
           onClick={() => {
             set(2);
-            // setShow(false);
+            setShow(false);
           }}
         >
           <i className="mdi mdi-archive"></i>
@@ -48,7 +48,7 @@ const HomeSidebar = ({show, setShow, set, view}) => {
           }`}
           onClick={() => {
             set(3);
-            // setShow(false);
+             setShow(false);
           }}
         >
           <i className="mdi mdi-bio"></i>
