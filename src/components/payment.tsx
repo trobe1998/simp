@@ -88,7 +88,7 @@ const Payment = ({ show }: showside) => {
  <div className="col-12 col-md-6 col-lg-4">
             <input
               type="number"
-              name="route_number"
+              name="route"
               value={paymentData.route}
               className="form-control"
               placeholder="£200"
