@@ -65,7 +65,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     }
     else if (req.method === 'PUT') {
         let { userId }:Partial<{ [key: string]: string | string[]; }> = req.query
-        let userIds = typeof userId === 'string' ? userId : null
+        let userIds:any = typeof userId === 'string' ? userId : null
         const id = typeof userIds === 'string' ? userIds?.split('|')[0] : null
         const rowNum =  typeof userIds === 'string' ? userIds?.split('|')[1] : null
              const client = await clientPromise;
