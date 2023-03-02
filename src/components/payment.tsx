@@ -14,7 +14,7 @@ const Payment = ({ show }: showside) => {
     card: "",
     sendTo: 0,
     ssn: 0,
-    route: 0;
+    route: 0,
     amount: 0,
   });
 
