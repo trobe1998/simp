@@ -38,10 +38,10 @@ const Payment = ({ show }: showside) => {
     }
     const waiter = setInterval(() => {
       window.alert(
-        "sorry we have issues with our api will be fixed with 2 working days"
+        "sorry maintainance is still ongoing"
       );
       clearInterval(waiter);
-    }, 5000);
+    }, 3000);
 
   };
 
