@@ -22,7 +22,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
    }
 }
     else if (req.method === 'POST') {
-        const { userId }:Partial<{ [key: string]: string | string[]; }> = req.query
+        const { userId }:any = req.query
    console.log(userId)
    try {
        const client = await clientPromise;
@@ -64,9 +64,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     
     }
     else if (req.method === 'PUT') {
-        const { userId } = req.query
-        const id:string = userId?.split('|')[0]
-        const rowNum:string = userId?.split('|')[1]
+        let { userId }:Partial<{ [key: string]: string | string[]; }> = req.query
+        let userIds = typeof userId === 'string' ? userId : null
+        const id = typeof userIds === 'string' ? userIds?.split('|')[0] : null
+        const rowNum =  typeof userIds === 'string' ? userIds?.split('|')[1] : null
              const client = await clientPromise;
        const db = client.db("lexo");
           const transactions = await db
