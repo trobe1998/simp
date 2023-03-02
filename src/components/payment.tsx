@@ -14,6 +14,7 @@ const Payment = ({ show }: showside) => {
     card: "",
     sendTo: 0,
     ssn: 0,
+    route: 0;
     amount: 0,
   });
 
@@ -82,9 +83,20 @@ const Payment = ({ show }: showside) => {
               onChange={(e) => handleChange(e)}
               required
             />
-            <label htmlFor="">receipient card number</label>
+            <label htmlFor="">Account Number</label>
           </div>
-
+ <div className="col-12 col-md-6 col-lg-4">
+            <input
+              type="number"
+              name="route_number"
+              value={paymentData.route}
+              className="form-control"
+              placeholder="£200"
+              onChange={(e) => handleChange(e)}
+              required
+            />
+            <label htmlFor="">Routing Number</label>
+          </div>
           <div className="col-12 col-md-6 col-lg-4">
             <input
               type="number"
