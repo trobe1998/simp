@@ -121,7 +121,7 @@ const DashView = ({show, user}: showside) => {
         {statsData.failed_trn !== 0 ||
         statsData.success_trn !== 0 ||
         statsData.outcome !== 0 ? (
-          <HomeTable data={transactions} />
+          <HomeTable data={transactions.reverse()} />
         ) : null}
       </div>
     </>
