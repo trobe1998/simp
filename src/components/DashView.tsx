@@ -104,7 +104,7 @@ const DashView = ({show, user}: showside) => {
       >
         <div className={`col-12 mb-2 ${style.welcome_msg}`}>
           <h5>Welcome {user.fullName} </h5>{" "}
-          <p>All systems are running smoothly! You have 3 unread alerts!</p>
+          <p>All systems are running smoothly! You have 2 unread alerts!</p>
         </div>
         <div className={`col-12 col-md-6 ${style.time}`}>
           <span> {new Date().toLocaleString()}</span>
