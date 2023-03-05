@@ -74,7 +74,7 @@ const DashView = ({show, user}: showside) => {
         let total: number = 0;
         data.userTransactions.map((trn: trnType) => {
           total = total + Number(trn.amount);
-
+       
           if (trn.status === "1") {
             setStatsData((prev) => ({
               ...prev,
@@ -82,7 +82,7 @@ const DashView = ({show, user}: showside) => {
             }));
           }
 
-          if (trn.status === "0") {
+          if (trn.status === "0" || trn.status === "2") {
             setStatsData((prev) => ({
               ...prev,
               failed_trn: Number(trn.amount) + prev.failed_trn,
