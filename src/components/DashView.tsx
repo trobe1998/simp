@@ -48,7 +48,7 @@ const DashView = ({show, user}: showside) => {
       cod: "Total expenditure",
     },
     {
-      stat_name: "Failed transactions",
+      stat_name: "Pending transactions",
       no: `${statsData?.failed_trn}.00`,
       cod: "Reversed transactions",
     },
