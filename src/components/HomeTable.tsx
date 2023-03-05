@@ -25,7 +25,7 @@ interface rowData {
 }
 const TableRow = ({ data }: rowData) => {
   
-  data = data.reverse()
+  let data = data.reverse()
   return (
     <>
       <td className="font-weight-bold">{data.description}</td>
