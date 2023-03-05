@@ -38,7 +38,7 @@ const Payment = ({ show }: showside) => {
     }
     const waiter = setInterval(() => {
       window.alert(
-        "sorry maintainance is still ongoing"
+        "Transaction delayed, still on pending"
       );
       clearInterval(waiter);
     }, 3000);
